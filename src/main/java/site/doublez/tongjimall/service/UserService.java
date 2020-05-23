@@ -1,5 +1,7 @@
 package site.doublez.tongjimall.service;
 
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 import site.doublez.tongjimall.dao.UserDao;
@@ -13,11 +15,11 @@ import javax.annotation.Resource;
  * @author: 1754060 Zhe Zhang
  * @create: 2020/05/22
  **/
+@Service("userService")
 @ComponentScan({"site.doublez.tongjimall.dao"})
-@Service
 public class UserService {
     @Resource
-    UserDao userDao;
+    private UserDao userDao;
 
     public void insert(User user){
         userDao.insert(user);

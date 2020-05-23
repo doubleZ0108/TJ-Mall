@@ -17,7 +17,7 @@ import java.util.Map;
 public class MainController {
     @RequestMapping(method = RequestMethod.GET)
     public String index(){
-        return "nihao";
+        return "index";
     }
 
     @PostMapping("/say")
