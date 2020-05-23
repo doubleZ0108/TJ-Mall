@@ -13,10 +13,15 @@ import java.util.Map;
  * @create: 2020/05/22
  **/
 @Controller
-@ResponseBody
+//@ResponseBody
 public class MainController {
     @RequestMapping(method = RequestMethod.GET)
     public String index(){
+        return "index";
+    }
+
+    @RequestMapping("hello")
+    public String hello(){
         return "index";
     }
 
