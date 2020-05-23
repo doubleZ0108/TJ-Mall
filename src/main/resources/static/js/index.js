@@ -1,7 +1,7 @@
 window.onload = function () {
     initNavigator();
     initHero();
-};
+}
 
 function initNavigator(){
     let navigator = $('navigator');

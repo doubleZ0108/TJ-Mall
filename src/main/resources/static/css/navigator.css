@@ -92,7 +92,8 @@
     transition: 1s cubic-bezier(0.2,0.8,0.2,1);
   }
   .NavigationGroup button:hover {
-    background-image: linear-gradient(104deg, #050A27, #4A54BC, #4A54BC, #050A27);
+    background-image: linear-gradient(104deg, 
+    #72EDF2, #5151E5, #5151E5, #72EDF2);
     background-size: 200%;
     background-position: 100% 0;
   
