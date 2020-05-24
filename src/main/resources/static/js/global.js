@@ -1,4 +1,5 @@
 let TONGJI_IMG_MAX = 12;    // 总图标数
+let CREATIVE_PRODUCTS_IMG_PATH = "../img/CreativeProducts/";
 
 /**
     $('container')
@@ -8,6 +9,10 @@ let TONGJI_IMG_MAX = 12;    // 总图标数
  */
 function $(id){
     return document.getElementById(id);
+}
+
+function $c(type){
+    return document.createElement(type);
 }
 
 /**
@@ -53,7 +58,7 @@ function readJson(filename){
             alert("请升级至最新版本的浏览器");  
         }  
         if(request != null){  
-            request.open("GET","../json/navigator.json", true);  
+            request.open("GET","../json/" + filename, true);  
             request.send(null);  
             request.onreadystatechange=function(){  
                 if(request.readyState==4 && request.status==200){  
