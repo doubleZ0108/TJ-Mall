@@ -1,9 +1,9 @@
 window.onload = function () {
-    initNavigator();
+    initNavigation();
     initHero();
 }
 
-function initNavigator(){
+function initNavigation(){
     let navigator = $('navigator');
     document.addEventListener('scroll', function () {
     if(self.pageYOffset > 50) {
@@ -12,6 +12,22 @@ function initNavigator(){
         navigator.classList.remove('NavigationScrolled');
     }
     });
+
+    initNavigationList();
+}
+
+function initNavigationList(){
+    let navigationList = $('NavigationList');
+    // let navigatorObj = readJson("navigator.json");
+
+    readJson("navigator.json")
+        .then(navigatorObj => {
+            // console.log(navigatorObj["navigator"]);
+            navigatorObj["navigator"].forEach(function(elem){
+                console.log(elem);
+            });
+        })
+        .catch(error => console.log(error));
 }
 
 function initHero(){
@@ -19,7 +35,6 @@ function initHero(){
     
     setInterval(function(){
         let index = getRandomNum(1, 12);
-        console.log(index);
         let index_str = index < 10 ? '0' + index.toString() : index.toString();
         hero.style.backgroundImage = 'url("../img/tongji/bg/' + index_str + '.png")';
     }, 10000);
