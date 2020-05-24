@@ -1,0 +1,139 @@
+.CreativeProductCardGroup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    justify-items: center;
+}
+
+@media (min-width: 1400px) {
+    .CreativeProductCardGroup {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1060px) {
+    .CreativeProductCardGroup {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .CreativeProductCardGroup {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 15px auto;
+    }
+}
+
+
+
+
+.CreativeProductCard {
+    width:300px;
+    height: 225px;
+    position: relative;
+    overflow: hidden;   /* use card layer as a mask */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+    display:grid;
+    grid-template-rows: 1fr 0.618fr;    /* divided by 2 equally */
+    grid-gap: 10px;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.CreativeProductCard:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.CreativeProductCard img {
+    filter: brightness(75%) blur(3px);
+    position: absolute;
+    top: 0;
+    /*特意放大一点，避免白边*/
+    height: 120%;
+    width: 110%;
+    transform: translateX(-5%);
+    z-index: -1;
+    background-size: cover;
+    object-fit: cover;  /* img自适应 */
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.CreativeProductCard:hover img {
+    filter: brightness(100%);
+    transform: translateY(-20px) translateX(-5%);
+    opacity: 1;
+}
+
+.CreativeProductCard h2 {
+    background: linear-gradient(104deg, #5151E5 -10%, #72EDF2 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*最多显示一行，多余用...表示*/
+    /* overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap; */
+
+    /*最多显示三行*/
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin: auto 20px auto 20px;
+    font-size: 30px;
+    font-style: bolder;
+    font-weight: bolder;
+    text-align: left;
+    align-self: end;
+    align-self: flex-end;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.CreativeProductCard:hover h2 {
+    transform: translateY(-30px) scale(1.1);
+    opacity: 0;
+}
+
+.CreativeProductCard div.appidx-info {
+    display: grid;
+    align-self: flex-start;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.CreativeProductCard p {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bolder;
+    font-style: bolder;
+    align-self: flex-start;
+    margin: auto auto auto 20px;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.CreativeProductCard:hover p {
+    transform: translateY(30px) scale(1.1);
+    opacity: 0;
+}
+
+.CreativeProductCard .Price {
+    font-weight: 600;
+    font-size: 15px;
+    padding: 7px;
+    width: 50%;
+    margin: auto auto;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    align-self: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.CreativeProductCard:hover .Price {
+    transform: translateY(30px) scale(1.1);
+    opacity: 0;
+}
