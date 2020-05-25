@@ -9,6 +9,7 @@
     display: grid;
     grid-template-rows: 0.618rf 1rf;
     grid-gap: 20px;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .WaveSectionGroup .WaveTop {
@@ -30,7 +31,7 @@
     margin: 0 auto 20px;
     border-radius: 50%;
     outline: none;
-    transition: 0.8s cubic-bezier(0.2,0.8,0.2,1);
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .WaveSectionGroup .WaveSectionTitleGroup {
@@ -55,13 +56,11 @@
     margin: auto 1px auto auto;
 }
 
-#wave-section-text-buf {
-    opacity: 0;
-}
 .WaveSectionTitleGroup .WaveSectionText {
     color: white;
     letter-spacing: 10px;
     text-align: center;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 @media (max-width: 640px) {

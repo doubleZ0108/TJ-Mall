@@ -4,4 +4,6 @@ window.onload = function () {
 
     initCreativeProduct();
     initSocialMedia();
+
+    initWaveSection();
 }
