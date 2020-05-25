@@ -6,4 +6,5 @@ window.onload = function () {
     initSocialMedia();
 
     initWaveSection();
+    initGift();
 }

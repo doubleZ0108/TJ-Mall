@@ -1,0 +1,84 @@
+.GiftCardGroup {
+    column-count: 3;
+    column-gap: 30px;
+    margin: auto 100px;
+}
+
+@media (max-width: 1060px){
+    .GiftCardGroup{
+        margin: auto 20px;
+    }
+}
+
+.GiftCard {
+    position: relative;
+    margin: 20px 0;
+}
+
+.GiftCard img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.GiftCard:hover img {
+    filter: brightness(75%) blur(3px);
+}
+
+
+.GiftCard .GiftCardTextGroup {
+    position: absolute;
+    height: 98%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 0.32fr 0.32fr;
+}
+
+
+.GiftCard .GiftCardTextGroup .GiftCardTitle {
+    background: linear-gradient(104deg, #5151E5 -10%, #72EDF2 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-self: flex-end;
+    margin: 5px 10px 15px;
+    opacity: 0;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: translateY(-50%);
+}
+.GiftCard:hover .GiftCardTextGroup .GiftCardTitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.GiftCard .GiftCardTextGroup .GiftCardIntro {
+    color: rgba(255,255,255,0.8);
+    font-weight: bolder;
+    align-self: flex-start;
+    margin: 5px 10px;
+    opacity: 0;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.GiftCard:hover .GiftCardTextGroup .GiftCardIntro {
+    opacity: 1;
+}
+
+.GiftCard .GiftCardTextGroup .GiftCardPrice{
+    align-self: flex-start;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    width: 30%;
+    margin: 0 auto;
+    opacity: 0;
+    padding: 2px 1px;
+    color: rgba(255,255,255,1);
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: translateY(30%);
+}
+.GiftCard:hover .GiftCardTextGroup .GiftCardPrice {
+    opacity: 1;
+    transform: translateY(0);
+}
