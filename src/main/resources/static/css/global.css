@@ -46,3 +46,9 @@ body {
   background-color: white;
 }
 
+
+.gap {
+  width: 100%;
+  opacity: 0;
+  height: 80px;
+}

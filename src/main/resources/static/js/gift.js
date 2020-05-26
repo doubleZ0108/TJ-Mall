@@ -18,7 +18,7 @@ function initGift(){
                 giftcardP.innerHTML = elem.intro;
                 let giftcardpriceDiv = $c('div');
                 giftcardpriceDiv.classList.add('GiftCardPrice');
-                giftcardpriceDiv.innerHTML = elem.price;
+                giftcardpriceDiv.innerHTML = "¥" + elem.price;
 
                 giftcardtextgroupDiv.appendChild(giftcardH3);
                 giftcardtextgroupDiv.appendChild(giftcardP);

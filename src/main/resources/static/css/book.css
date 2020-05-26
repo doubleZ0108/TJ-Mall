@@ -1,18 +1,21 @@
 .BookGroup {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
+    margin: auto 30px;
 }
-@media (min-width: 1400px){
+@media (min-width: 1300px){
     .BookGroup {
-        margin: auto 50px;
+        margin: auto 30px;
+        grid-template-columns: repeat(4, auto);
     }
 }
 
 .BookGroup .BookCard {
+    align-self: center;
     position: relative;
     height: 400px;
     width: 280px;
-    margin: 10px;
+    margin: 10px auto;
     display: block;
     background-color: white;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);

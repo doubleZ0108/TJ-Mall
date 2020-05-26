@@ -1,24 +1,24 @@
 {
     "navigator": [
         {
-            "href": "life-trace",
-            "content": "人生轨迹",
-            "title": "人生是个不断贴标签的过程"
+            "href": "index.html#",
+            "content": "同济商城",
+            "title": "TJ-Mall"
         },
         {
-            "href": "life-trace",
-            "content": "人生轨迹",
-            "title": "人生是个不断贴标签的过程"
+            "href": "index.html#creative-product-anchor",
+            "content": "同济创意",
+            "title": "Tongji Creative"
         },
         {
-            "href": "life-trace",
-            "content": "人生轨迹",
-            "title": "人生是个不断贴标签的过程"
+            "href": "index.html#gift-anchor",
+            "content": "同济礼物",
+            "title": "Tongji Gift"
         },
         {
-            "href": "life-trace",
-            "content": "人生轨迹",
-            "title": "人生是个不断贴标签的过程"
+            "href": "index.html#book-anchor",
+            "content": "同济出版",
+            "title": "Tongji Publication"
         }
     ]
 }

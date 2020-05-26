@@ -18,7 +18,7 @@ function initBook(){
                 bookcardTitle.innerHTML = elem.title;
                 let bookcardPrice = $c('div');
                 bookcardPrice.classList.add('BookCardPrice');
-                bookcardPrice.innerHTML = elem.price;
+                bookcardPrice.innerHTML = "¥" + elem.price;
 
                 let BookCardBottom = $c('div');
                 BookCardBottom.classList.add('BookCardBottom')

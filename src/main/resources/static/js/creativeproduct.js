@@ -2,7 +2,7 @@ function initCreativeProduct(){
     let creativeproduct = $('CreativeProductCardGroup');
     readJson("creativeproduct.json")
         .then(creativeproductObj => {
-            creativeproductObj["creativeproduct"].forEach(function(elem){
+            creativeproductObj["creativeproduct"].forEach(function(elem, index){
                 let creativeproductDiv = $c('div');
                 creativeproductDiv.classList.add('CreativeProductCard');
                 let creativeproductImg = $c('img');
@@ -24,6 +24,12 @@ function initCreativeProduct(){
                 creativeproductDiv.appendChild(bufDiv);
 
                 creativeproduct.append(creativeproductDiv);
+
+                creativeproductDiv.addEventListener('click', function(){
+                    let type = "creative-product";
+
+                    window.location.href = "product.html?" + "type=" + type + "&index=" + index;
+                });
             });
         })
         .catch(error => console.log(error));
