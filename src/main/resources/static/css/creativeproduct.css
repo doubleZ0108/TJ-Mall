@@ -3,11 +3,13 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
     justify-items: center;
+    margin: 0 80px;
 }
 
 @media (min-width: 1400px) {
     .CreativeProductCardGroup {
         grid-template-columns: repeat(4, 1fr);
+        margin: 0 50px;
     }
 }
 

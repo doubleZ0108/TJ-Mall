@@ -7,4 +7,5 @@ window.onload = function () {
 
     initWaveSection();
     initGift();
+    initBook();
 }
