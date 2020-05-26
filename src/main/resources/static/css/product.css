@@ -1,0 +1,109 @@
+.ProductGroup {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+    height: 65%;
+    border-radius: 50px;
+    
+    text-align: center;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    align-items: center;
+}
+
+.ProductGroup .ProductTitle {
+    max-width: 80%;
+    font-size: 30px;
+    margin: 10px auto;
+    background: linear-gradient(104deg, #5151E5 0%, #72EDF2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ProductGroup .ProductInfo {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items:center;
+}
+
+.ProductGroup .ProductInfo img {
+    margin: 0 auto;
+}
+
+.ProductGroup .ProductTextGroup {
+    margin: 0 auto 0 0;
+    text-align: left;
+}
+
+.ProductGroup .ProductPrice {
+    margin-bottom: 20px;
+}
+
+.ProductGroup .ProductPrice label {
+    background: linear-gradient(104deg, #72EDF2 0%, #5151E5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+
+.ProductGroup .ProductAmount {
+    margin-top: 20px;
+}
+
+.ProductGroup .ProductAmount input {
+    height: 30px;
+    width: 50px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.ProductGroup .water-ripple {
+    outline: none;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    margin: 0 30px 50px auto;
+    padding: 0 5px;
+    position: relative;
+    display: inline-block;;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #5151E5, #72EDF2);
+}
+
+
+.ProductGroup .water-ripple  span {
+    position: absolute;;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: WaterRippleAnimation 1s linear infinite;
+}
+
+@keyframes WaterRippleAnimation {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.3;
+    }
+    75% {
+        width: 500px;
+        height: 500px;
+        opacity: 0.3;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
