@@ -29,14 +29,13 @@ function initLogin(){
     accountSignUpButton.addEventListener('click', () => {
         let name = signUpName.value;
         let password = signUpPassword.value;
-        console.log(name + " " + password);
-        //Todo: 将[name, password]传给后端，记录用户名称和密码
         let userPassword = {username: name, password: password};
-        console.log(userPassword);
-        receiveSignUp(userPassword);
+
+        //Todo: 将[name, password]传给后端，记录用户名称和密码
+        connectToBackEnd(userPassword);
+
         const hiddenText = document.getElementById('success-sign-up');
         hiddenText.className = 'show';
-        //setTimeout("window.location.reload()",100000);
     });
     
     accountSignInButton.addEventListener('click', async () => {
@@ -51,12 +50,33 @@ function initLogin(){
             const hiddenTextForSuccess = document.getElementById('success-sign-in');
             hiddenTextForSuccess.className = 'show';
             localStorage.setItem(localStorageName, name);
-            // window.location.href="incex.html";
             window.location.href = "calendar.html";
-    //        setTimeout("window.location.href=\"calendar.html\" ",300);
         } else {
             const hiddenTextForFail = document.getElementById('fail-sign-in');
             hiddenTextForFail.className = 'show';
         }
     });
+}
+
+function connectToBackEnd(jsonObj){
+    let request;
+    if(window.XMLHttpRequest){
+        request = new XMLHttpRequest();
+    }else if(window.ActiveXObject){
+        request = new window.ActiveXObject();
+    }else{
+        alert("请升级至最新版本的浏览器");
+    }
+    if(request != null){
+        request.open("POST","test-connecting-back-end", true);
+        request.setRequestHeader("Content-Type","application/json");
+        request.send(JSON.stringify(jsonObj));
+        // request.send(null);
+        request.onreadystatechange=function(){
+            if(request.readyState==4 && request.status==200){
+                let resultdata = JSON.parse(request.responseText);
+                console.log(resultdata);
+            }
+        };
+    }
 }

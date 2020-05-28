@@ -31,7 +31,7 @@ function initGift(){
 
                 giftcardDiv.addEventListener('click', function(){
                     let type = "gift";
-                    window.location.href = "product.html?" + "type=" + type + "&index=" + index;
+                    window.location.href = "product?" + "type=" + type + "&index=" + index;
                 });
             });
         })

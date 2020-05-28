@@ -27,7 +27,7 @@ function initCreativeProduct(){
 
                 creativeproductDiv.addEventListener('click', function(){
                     let type = "creative-product";
-                    window.location.href = "product.html?" + "type=" + type + "&index=" + index;
+                    window.location.href = "product?" + "type=" + type + "&index=" + index;
                 });
             });
         })

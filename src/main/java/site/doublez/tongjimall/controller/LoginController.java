@@ -10,24 +10,21 @@ import java.util.Map;
  * @program: TJ-Mall
  * @description:
  * @author: 1754060 Zhe Zhang
- * @create: 2020/05/22
+ * @create: 2020/05/28
  **/
 @Controller
-//@ResponseBody
-public class MainController {
-    @RequestMapping(method = RequestMethod.GET)
-    public String index(){
-        return "index";
+public class LoginController {
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public String login(){
+        return "login";
     }
 
-//    @RequestMapping(method = RequestMethod.GET)
-//    public String product(){
-//        return "product";
-//    }
-
-    @PostMapping("/say")
+    @PostMapping("/test-connecting-back-end")
+//    @RequestParam
     @ResponseBody
-    public Map<String, Object> MetadataLayerConstruct(@RequestBody Map<String,Object> map){
+    public Map<String, Object> TestConnectingBackEnd(@RequestBody Map<String,Object> map){
+        String data = map.get("username").toString();
+        System.out.println(map);
 
         Map<String, Object> result_map = new HashMap<>();
         result_map.put("flag", "true");
