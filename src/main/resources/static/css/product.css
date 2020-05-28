@@ -61,12 +61,12 @@
     border-radius: 10px;
 }
 
-.ProductGroup .WaterRipple {
+.WaterRipple {
     outline: none;
     cursor: pointer;
     height: 50px;
     width: 150px;
-    margin: 0 30px 50px auto;
+    margin: auto 30px 50px auto;
     padding: 0 5px;
     position: relative;
     display: inline-block;;
@@ -81,8 +81,7 @@
     background: linear-gradient(90deg, #5151E5, #72EDF2);
 }
 
-
-.ProductGroup .WaterRipple span {
+.WaterRipple span {
     position: absolute;;
     background: #fff;
     transform: translate(-50%, -50%);
@@ -109,7 +108,7 @@
     }
 }
 
-.ProductGroup .WaterRipple:hover {
+.WaterRipple:hover {
     animation: rubberBandAnimation 1s;
 }
 
