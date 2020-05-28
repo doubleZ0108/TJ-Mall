@@ -84,3 +84,7 @@ function getParams(key) {
     }
     return null;
 };
+
+function getIndexStr(index){
+    return (index<10 ? "0"+index.toString() : index.toString());
+}

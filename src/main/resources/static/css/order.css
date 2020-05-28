@@ -133,7 +133,7 @@
 }
 
 .HistoryList li.HistoryCard {
-    width: 20%;
+    /* width: 20%; */
     height: 100%;
     float: left;
     position: relative;
@@ -144,13 +144,13 @@
     height: 100%;
 }
 
-.HistoryGroup:hover li.HistoryCard {
+/* .HistoryGroup:hover li.HistoryCard {
     width: 10%;
 }
 
 .HistoryGroup li.HistoryCard:hover {
     width: 60%;
-}
+} */
 
 .HistoryGroup .Content {
     position: absolute;
@@ -160,7 +160,7 @@
     top: 10%;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
-    /* opacity: 0; */
+    opacity: 0;
     transition: .8s cubic-bezier(0.2,0.8,0.2,1);
 }
 .HistoryGroup li.HistoryCard:hover .Content {

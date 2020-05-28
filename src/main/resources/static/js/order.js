@@ -1,13 +1,14 @@
 window.onload = function () {
     initNavigation();
-    initShoppingCart();
+    initOrderHero();
     initWaterRipple();
     initButton();
     initSettle();
+    initHistory();
     initSocialMedia();
 };
 
-function initShoppingCart() {
+function initOrderHero() {
     let hero = $('hero');
     hero.style.backgroundImage = 'url("../img/tongji/bg/' + '08' + '.png")';
 }
