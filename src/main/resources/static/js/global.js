@@ -83,8 +83,39 @@ function getParams(key) {
         return unescape(r[2]);
     }
     return null;
-};
+}
 
 function getIndexStr(index){
     return (index<10 ? "0"+index.toString() : index.toString());
+}
+
+
+function connectToBackEnd(frontendObj, url){
+    return new Promise((resolve, reject) => {
+        let backendObj;
+        let request;
+        if(window.XMLHttpRequest){
+            request = new XMLHttpRequest();
+        }else if(window.ActiveXObject){
+            request = new window.ActiveXObject();
+        }else{
+            alert("请升级至最新版本的浏览器");
+        }
+        if(request != null){
+            request.open("POST",url, true);
+            request.setRequestHeader("Content-Type","application/json");
+            request.send(JSON.stringify(frontendObj));
+            // request.send(null);
+            request.onreadystatechange=function(){
+                if(request.readyState==4 && request.status==200){
+                    backendObj = JSON.parse(request.responseText);
+
+                    resolve(backendObj);        // 通过 resolve 参数把成功的结果返回
+                    reject('error');     // 通过 reject 参数把错误信息返回
+
+                    return backendObj;
+                }
+            };
+        }
+    });
 }
