@@ -20,10 +20,10 @@ public class MainController {
         return "index";
     }
 
-    @RequestMapping("hello")
-    public String hello(){
-        return "index";
-    }
+//    @RequestMapping(method = RequestMethod.GET)
+//    public String product(){
+//        return "product";
+//    }
 
     @PostMapping("/say")
     @ResponseBody
