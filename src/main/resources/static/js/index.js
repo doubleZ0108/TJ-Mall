@@ -8,4 +8,10 @@ window.onload = function () {
     initWaveSection();
     initGift();
     initBook();
+
+    initSessionStorage();
+};
+
+function initSessionStorage(){
+    sessionStorage.setItem("isLogin", "false");
 }

@@ -168,7 +168,7 @@ svg {
 .LoginGroup button.ghost:hover {
     border-color: rgba(255, 255, 255, 1);
 }
-.LoginGroup form {
+.LoginGroup .SignGroup {
     background-color: #FFFFFF;
     display: flex;
     align-items: center;

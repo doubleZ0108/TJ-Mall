@@ -6,7 +6,7 @@ function initCreativeProduct(){
                 let creativeproductDiv = $c('div');
                 creativeproductDiv.classList.add('CreativeProductCard');
                 let creativeproductImg = $c('img');
-                creativeproductImg.src =  CREATIVE_PRODUCTS_IMG_PATH + elem.imgsrc;
+                creativeproductImg.src =  "../img/CreativeProducts/" + elem.imgsrc;
                 let creativeproductH2 = $c('h2');
                 creativeproductH2.innerHTML = elem.title;
                 let bufDiv = $c('div');

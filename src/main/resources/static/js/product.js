@@ -49,7 +49,11 @@ function initProduct(type, index){
 
 function initAddtoShoppingCart(type, index){
     let addbtn = $('AddtoShoppingCart');
-    addbtn.addEventListener('click', function () {
+    addbtn.addEventListener('click', AddtoShoppingCartBtnClick);
+}
+
+function AddtoShoppingCartBtnClick(){
+    if(sessionStorage.getItem("isLogin") === "true"){
         let title = $('ProductTitle').innerHTML;
         let price = $('price-per-one').innerHTML.substring(1);
         let amount = $('number-input').value;
@@ -66,5 +70,7 @@ function initAddtoShoppingCart(type, index){
                 console.log(result);
             })
             .catch(error => console.log(error));
-    });
+    } else {
+        alert("您需要登陆之后才能购买商品")
+    }
 }

@@ -5,7 +5,7 @@ function initWaveSection() {
         .then(tongjiObj => {
             document.querySelectorAll('.WaveSectionGroup').forEach(function(elem){
                 let index = getRandomNum(1, 12);
-                let index_str = index < 10 ? '0' + index.toString() : index.toString();
+                let index_str = getIndexStr(index);
         
                 elem.style.backgroundImage = "url('../../img/tongji/bg/" + index_str + ".png')";
         

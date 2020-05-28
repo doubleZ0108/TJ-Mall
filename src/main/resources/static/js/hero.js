@@ -3,7 +3,7 @@ function initHero(){
     
     setInterval(function(){
         let index = getRandomNum(1, 12);
-        let index_str = index < 10 ? '0' + index.toString() : index.toString();
+        let index_str = getIndexStr(index);
         hero.style.backgroundImage = 'url("../img/tongji/bg/' + index_str + '.png")';
     }, 10000);
 }
