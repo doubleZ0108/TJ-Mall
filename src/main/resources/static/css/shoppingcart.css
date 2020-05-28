@@ -1,0 +1,142 @@
+.Tags {
+    background: url('../../img/tongji/bg/06.png');
+    background-repeat: no-repeat;
+    /* background-position: center;
+    background-size: cover; */
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: url('../../img/tongji/bg/06.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px);
+}
+
+.TagGroup {
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+}
+
+
+@media (max-width:750px) {
+    .TagGroup {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.TagCard {
+    width: 100%;
+    height: 150px;
+    margin: auto 0;
+    border-radius: 30px;
+    box-shadow: -3px -3px 7px #eee,
+                3px 3px 5px rgba(94, 104, 121, 0.288);
+    align-self: center;   
+    z-index: 99;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.TagCard:hover {
+    box-shadow: inset -3px -3px 7px #ffffff73,
+                inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+.TagCard img {
+    width: auto;
+    height: 80%;
+    align-self: flex-end;
+    margin: auto;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.TagCard:hover img {
+    transform: scale(1.15);
+}
+
+.TagCard .Text {
+    align-self: center;
+    margin: auto;
+    display: grid;
+    color: white;
+    text-align: center;
+    grid-template-rows: 0.618fr 1fr;
+    grid-gap: 10px;
+    transition: grid-template-rows 2s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.TagCard h1 {
+    align-self: center;
+    text-align: center;
+    font-size: 30px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    opacity: 1;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.TagCard .Text .PriceGroup {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+}
+
+.TagCard .Text .PriceGroup span {
+    margin: 20px auto;
+    font-size: 25px;
+}
+
+.TagCard .Text .PriceGroup label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.TagCard .Text .PriceGroup span:nth-child(3) label{
+    background: linear-gradient(104deg, #5151E5 0%, #72EDF2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@media (max-width:750px) {
+    .TagCard {
+        width: 100%;
+        height: 150px;
+        align-self: center;
+        grid-template-columns: 0.6fr 1fr;
+    }
+
+    .TagCard img {
+        width: 70%;
+        height: auto;
+        align-self: flex-end;
+    }
+
+    .TagCard .Text {
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .TagCard h1 {
+        margin: auto;
+        font-size: 30px;
+    }
+    .TagCard p {
+        margin: 0 10px;
+    }
+}
+
+/* 流动动画 */
+.Hero svg {
+    position: absolute; /* 随页面滚动的绝对定位 */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

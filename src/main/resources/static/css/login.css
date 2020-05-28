@@ -111,8 +111,8 @@ svg {
 
 .LoginGroup button {
     border-radius: 20px;
-    border: 1px solid white;
-    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
@@ -125,12 +125,20 @@ svg {
     background-image: linear-gradient(to right, #5151E5, #72EDF2);
     background-size: 200%;
     background-position: 0 100%;
+    transition: .8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.LoginGroup .sign-up-container button:hover {
+    animation: rubberBandAnimation 1s;
 }
 
 .LoginGroup .sign-in-container button{
     background-image: linear-gradient(to right, #5151E5, #72EDF2);
     background-size: 200%;
     background-position: 100% 0;
+    transition: .8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.LoginGroup .sign-in-container button:hover {
+    animation: rubberBandAnimation 1s;
 }
 
 .LoginGroup button:active {
@@ -138,7 +146,8 @@ svg {
 }
 
 .LoginGroup button:hover {
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
     cursor: pointer;
 }
 
@@ -148,9 +157,12 @@ svg {
 
 .LoginGroup button.ghost {
     background-color: transparent;
-    border-color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.6);
+    transition: .8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-
+.LoginGroup button.ghost:hover {
+    border-color: rgba(255, 255, 255, 1);
+}
 .LoginGroup form {
     background-color: #FFFFFF;
     display: flex;
@@ -298,4 +310,25 @@ svg {
 
 .LoginGroup .show {
     visibility: visible;
+}
+
+@keyframes rubberBandAnimation {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    35% {
+        transform: scale3d(1.25, .75, 1);
+    }
+    45% {
+        transform: scale3d(.75, 1, 1);
+    }
+    60% {
+        transform: scale3d(1.2, .8, 1);
+    }
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
 }
