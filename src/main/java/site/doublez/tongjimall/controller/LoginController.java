@@ -24,17 +24,6 @@ public class LoginController {
         return "login";
     }
 
-//    @PostMapping("/test-connecting-back-end")
-//    @ResponseBody
-//    public Map<String, Object> TestConnectingBackEnd(@RequestBody Map<String,Object> map){
-//        String data = map.get("username").toString();
-//        System.out.println(map);
-//
-//        Map<String, Object> result_map = new HashMap<>();
-//        result_map.put("flag", "true");
-//
-//        return result_map;
-//    }
 
     @PostMapping("/sign-up")
     @ResponseBody

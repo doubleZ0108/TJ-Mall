@@ -5,6 +5,7 @@ window.onload = function(){
     initNavigation(true);
     initWaterRipple();
     initProduct(type, index);
+    initAddtoShoppingCart(type, index);
 };
 
 function initProduct(type, index){
@@ -44,4 +45,26 @@ function initProduct(type, index){
             image.src = "../img/" + imgDirName + "/" + elem.imgsrc;
         })
         .catch(error => console.log(error));
+}
+
+function initAddtoShoppingCart(type, index){
+    let addbtn = $('AddtoShoppingCart');
+    addbtn.addEventListener('click', function () {
+        let title = $('ProductTitle').innerHTML;
+        let price = $('price-per-one').innerHTML.substring(1);
+        let amount = $('number-input').value;
+        let type_title_price_amount = {
+            "type": type,
+            "index": index,
+            "title": title,
+            "price": price,
+            "amount": amount
+        };
+
+        connectToBackEnd(type_title_price_amount, "add-to-shopping-cart")
+            .then(result => {
+                console.log(result);
+            })
+            .catch(error => console.log(error));
+    });
 }
