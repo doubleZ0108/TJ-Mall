@@ -8,10 +8,12 @@ body {
     margin: -20px 0 50px;
 
     /* 消除blur的白边 */
-    background: url('../../img/tongji/bg/03.png');
+    background: url('../../img/tongji/bg/06.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    overflow: hidden;   /*禁止页面滚动*/
 }
 
 .LoginGroup {
@@ -29,11 +31,11 @@ body {
     height: 100%;
     position: absolute;
     left: 0;
-    background: url('../../img/tongji/bg/03.png');
+    background: url('../../img/tongji/bg/06.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    filter: blur(15px);
+    filter: blur(5px);
 }
 
 /*spotlight*/
@@ -87,7 +89,7 @@ body {
 }
 
 svg {
-    position: absolute; /* 随页面滚动的绝对定位 */
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -95,38 +97,21 @@ svg {
 }
 
 
-h1 {
-    font-weight: bold;
-    margin: 0;
-}
-
-h2 {
-    text-align: center;
-}
-
-p {
+.LoginGroup p {
     font-size: 14px;
-    font-weight: 100;
     line-height: 20px;
     letter-spacing: 0.5px;
     margin: 20px 0 30px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-span {
+.LoginGroup span {
     font-size: 12px;
 }
 
-a {
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
-}
-
-button {
+.LoginGroup button {
     border-radius: 20px;
-    border: 1px solid rgb(102, 112, 93);
-    background-color: rgb(102, 112, 93);
+    border: 1px solid white;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -136,25 +121,37 @@ button {
     transition: transform 80ms ease-in;
 }
 
-button:active {
+.LoginGroup .sign-up-container button{
+    background-image: linear-gradient(to right, #5151E5, #72EDF2);
+    background-size: 200%;
+    background-position: 0 100%;
+}
+
+.LoginGroup .sign-in-container button{
+    background-image: linear-gradient(to right, #5151E5, #72EDF2);
+    background-size: 200%;
+    background-position: 100% 0;
+}
+
+.LoginGroup button:active {
     transform: scale(0.95);
 }
 
-button:hover {
-    background-color: rgb(125, 133, 118);
-    border: 1px solid rgb(125, 133, 118);
+.LoginGroup button:hover {
+    border: 1px solid white;
+    cursor: pointer;
 }
 
-button:focus {
+.LoginGroup button:focus {
     outline: none;
 }
 
-button.ghost {
+.LoginGroup button.ghost {
     background-color: transparent;
     border-color: #FFFFFF;
 }
 
-form {
+.LoginGroup form {
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -165,7 +162,7 @@ form {
     text-align: center;
 }
 
-input {
+.LoginGroup input {
     background-color: #eee;
     border: none;
     padding: 12px 15px;
@@ -173,7 +170,7 @@ input {
     width: 100%;
 }
 
-.container {
+.LoginGroup .container {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
@@ -185,31 +182,31 @@ input {
     min-height: 480px;
 }
 
-.form-container {
+.LoginGroup .form-container {
     position: absolute;
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
 }
 
-.sign-in-container {
+.LoginGroup .sign-in-container {
     left: 0;
     width: 50%;
     z-index: 2;
 }
 
-.container.right-panel-active .sign-in-container {
+.LoginGroup .container.right-panel-active .sign-in-container {
     transform: translateX(100%);
 }
 
-.sign-up-container {
+.LoginGroup .sign-up-container {
     left: 0;
     width: 50%;
     opacity: 0;
     z-index: 1;
 }
 
-.container.right-panel-active .sign-up-container {
+.LoginGroup .container.right-panel-active .sign-up-container {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -228,7 +225,7 @@ input {
     }
 }
 
-.overlay-container {
+.LoginGroup .overlay-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -239,14 +236,14 @@ input {
     z-index: 100;
 }
 
-.container.right-panel-active .overlay-container {
+.LoginGroup .container.right-panel-active .overlay-container {
     transform: translateX(-100%);
 }
 
-.overlay {
+.LoginGroup .overlay {
     background: rgb(102, 112, 93);;
-    background: -webkit-linear-gradient(to right, rgb(67, 75, 61), rgb(158, 158, 139));
-    background: linear-gradient(to right, rgb(67, 75, 61), rgb(158, 158, 139));
+    background: -webkit-linear-gradient(top, #5151E5, #72EDF2);
+    background: linear-gradient(to right, #5151E5, #72EDF2);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -263,7 +260,7 @@ input {
     transform: translateX(50%);
 }
 
-.overlay-panel {
+.LoginGroup .overlay-panel {
     position: absolute;
     display: flex;
     align-items: center;
@@ -278,67 +275,27 @@ input {
     transition: transform 0.6s ease-in-out;
 }
 
-.overlay-left {
+.LoginGroup .overlay-left {
     transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left {
+.LoginGroup .container.right-panel-active .overlay-left {
     transform: translateX(0);
 }
 
-.overlay-right {
+.LoginGroup .overlay-right {
     right: 0;
     transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+.LoginGroup .container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
 
-.social-container {
-    margin: 20px 0;
-}
-
-.social-container a {
-    border: 1px solid #DDDDDD;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    height: 40px;
-    width: 40px;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: rgb(102, 112, 93);
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
-
-.hidden {
+.LoginGroup .hidden {
     visibility: hidden;
 }
 
-.show {
+.LoginGroup .show {
     visibility: visible;
 }

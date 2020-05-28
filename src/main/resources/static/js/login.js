@@ -1,4 +1,5 @@
 window.onload = function () {
+
     const localStorageName = 'user-name';
 
     const signUpButton = document.getElementById('signUp');
