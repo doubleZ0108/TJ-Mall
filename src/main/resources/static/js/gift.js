@@ -2,7 +2,7 @@ function initGift(){
     let giftcardgroup = $('GiftCardGroup');
     readJson("gift.json")
         .then(giftcardObj => {
-            giftcardObj["gift"].forEach(function(elem){
+            giftcardObj["gift"].forEach(function(elem, index){
                 let giftcardDiv = $c('div');
                 giftcardDiv.classList.add('GiftCard');
                 let giftcardImg = $c('img');
@@ -28,6 +28,11 @@ function initGift(){
                 giftcardDiv.appendChild(giftcardtextgroupDiv);
 
                 giftcardgroup.appendChild(giftcardDiv);
+
+                giftcardDiv.addEventListener('click', function(){
+                    let type = "gift";
+                    window.location.href = "product.html?" + "type=" + type + "&index=" + index;
+                });
             });
         })
         .catch(error => console.log(error));

@@ -4,28 +4,44 @@ window.onload = function(){
     
     initNavigation();
     initWaterRipple();
+    initProduct(type, index);
 };
 
-function initWaterRipple(){
-    const buttons = document.getElementsByClassName('water-ripple');
+function initProduct(type, index){
+    let product = $('ProductGroup');
+    let title = product.firstElementChild;
+    let image = title.nextElementSibling.firstElementChild;
+    let price = image.nextElementSibling.firstElementChild.firstElementChild;
+    let hero = $('hero');
 
-    HTMLCollection.prototype.toArray = function () {
-        return [].slice.call(this);
-    };
+    let jsonFileName;
+    let imgDirName;
+    switch (type) {
+        case 'creative-product':
+            jsonFileName = "creativeproduct";
+            imgDirName = "CreativeProducts";
+            hero.style.backgroundImage = 'url("../img/tongji/bg/' + '03' + '.png")';
+            break;
+        case 'gift':
+            jsonFileName = "gift";
+            imgDirName = "Gifts";
+            hero.style.backgroundImage = 'url("../img/tongji/bg/' + '05' + '.png")';
+            break;
+        case 'book':
+            jsonFileName = "book";
+            imgDirName = "Books";
+            hero.style.backgroundImage = 'url("../img/tongji/bg/' + '10' + '.png")';
+            break;
+        default:
+            console.log("type unknown");
+    }
 
-    buttons.toArray().forEach(btn => {
-        btn.addEventListener('click', function (e) {
-            let x = e.clientX - e.target.offsetLeft;
-            let y = e.clientY - e.target.offsetTop;
-
-            let ripples = document.createElement('span');
-            ripples.style.left = x + 'px';
-            ripples.style.top = y + 'px';
-            this.appendChild(ripples);
-
-            setTimeout(() => {
-                ripples.remove()
-            }, 1000)
-        });
-    });
+    readJson(jsonFileName + ".json")
+        .then(productObj => {
+            let elem = productObj[jsonFileName][index];
+            title.innerHTML = elem.title;
+            price.innerHTML = "¥" + elem.price;
+            image.src = "../img/" + imgDirName + "/" + elem.imgsrc;
+        })
+        .catch(error => console.log(error));
 }

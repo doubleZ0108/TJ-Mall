@@ -16,7 +16,7 @@
 .ProductGroup .ProductTitle {
     max-width: 80%;
     font-size: 30px;
-    margin: 10px auto;
+    margin: 20px auto 0;
     background: linear-gradient(104deg, #5151E5 0%, #72EDF2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,7 +29,8 @@
 }
 
 .ProductGroup .ProductInfo img {
-    margin: 0 auto;
+    margin: 10px auto;
+    max-height: 250px;
 }
 
 .ProductGroup .ProductTextGroup {
@@ -60,7 +61,7 @@
     border-radius: 10px;
 }
 
-.ProductGroup .water-ripple {
+.ProductGroup .WaterRipple {
     outline: none;
     cursor: pointer;
     height: 50px;
@@ -81,7 +82,7 @@
 }
 
 
-.ProductGroup .water-ripple  span {
+.ProductGroup .WaterRipple  span {
     position: absolute;;
     background: #fff;
     transform: translate(-50%, -50%);

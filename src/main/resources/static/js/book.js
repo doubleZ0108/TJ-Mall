@@ -2,7 +2,7 @@ function initBook(){
     let bookgroup = $('BookGroup');
     readJson("book.json")
         .then(bookObj => {
-            bookObj["book"].forEach(function(elem){
+            bookObj["book"].forEach(function(elem, index){
                 let bookcard = $c('div');
                 bookcard.classList.add('BookCard');
 
@@ -34,6 +34,11 @@ function initBook(){
                 bookcard.appendChild(bookcardImageDiv);
                 bookcard.appendChild(bookcardContent);
                 bookgroup.appendChild(bookcard);
+
+                bookcard.addEventListener('click', function(){
+                    let type = "book";
+                    window.location.href = "product.html?" + "type=" + type + "&index=" + index;
+                });
             });
         })
         .catch(error => console.log(error));
