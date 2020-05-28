@@ -53,6 +53,19 @@
     margin-top: 20px;
 }
 
+.ProductGroup .ProductAmount label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-left: 20px;
+    font-weight: lighter;
+    opacity: 0;
+    transition: .8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ProductGroup .ProductTextGroup:hover .ProductAmount label {
+    opacity: 1;
+}
+
 .ProductGroup .ProductAmount input {
     height: 30px;
     width: 50px;

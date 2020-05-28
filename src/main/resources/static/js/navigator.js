@@ -1,4 +1,4 @@
-function initNavigation(){
+function initNavigation(flag){
     let navigator = $('navigator');
     document.addEventListener('scroll', function () {
     if(self.pageYOffset > 50) {
@@ -8,6 +8,10 @@ function initNavigation(){
     }
     });
 
+    if(flag){
+        navigator.classList.add('NavigationScrolled');
+    }
+    
     initNavigationList();
 }
 

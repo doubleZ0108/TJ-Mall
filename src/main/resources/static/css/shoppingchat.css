@@ -1,0 +1,135 @@
+/* ============== ShoppingCart ================= */
+.ShoppingCartGroup {
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+}
+
+.ShoppingCartCard {
+    width: 100%;
+    height: 150px;
+    margin: auto 0;
+    border-radius: 30px;
+    box-shadow: -3px -3px 7px #eee,
+                3px 3px 5px rgba(94, 104, 121, 0.288);
+    align-self: center;   
+    z-index: 99;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.ShoppingCartCard:hover {
+    box-shadow: inset -3px -3px 7px #ffffff73,
+                inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+.ShoppingCartCard img {
+    width: auto;
+    height: 80%;
+    align-self: flex-end;
+    margin: auto;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.ShoppingCartCard:hover img {
+    transform: scale(1.15);
+}
+
+.ShoppingCartCard .Text {
+    align-self: center;
+    margin: auto;
+    display: grid;
+    color: black;
+    text-align: center;
+    grid-template-rows: 0.618fr 1fr;
+    grid-gap: 10px;
+    transition: grid-template-rows 2s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.ShoppingCartCard h1 {
+    align-self: center;
+    text-align: center;
+    font-size: 30px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    opacity: 1;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ShoppingCartCard .Text .PriceGroup {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+}
+
+.ShoppingCartCard .Text .PriceGroup span {
+    margin: 20px auto;
+    font-size: 25px;
+}
+
+.ShoppingCartCard .Text .PriceGroup label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.ShoppingCartCard .Text .PriceGroup span:nth-child(3) label{
+    background-image: linear-gradient(to right, #5151E5, #72EDF2);
+    background-size: 200%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@media (max-width:750px) {
+    .ShoppingCartCard {
+        width: 100%;
+        height: 150px;
+        align-self: center;
+        grid-template-columns: 0.6fr 1fr;
+    }
+
+    .ShoppingCartCard img {
+        width: 70%;
+        height: auto;
+        align-self: flex-end;
+    }
+
+    .ShoppingCartCard .Text {
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .ShoppingCartCard h1 {
+        margin: auto;
+        font-size: 30px;
+    }
+    .ShoppingCartCard p {
+        margin: 0 10px;
+    }
+}
+
+
+.settle {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    margin-top: 10px;
+}
+.settle span {
+    margin: 10px auto;
+    background-image: linear-gradient(to right, #5151E5, #72EDF2);
+    background-size: 200%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.settle button {
+    margin: 10px auto;
+    background-image: linear-gradient(to right, #5151E5, #72EDF2);
+    background-size: 200%;
+    background-position: 100% 0;
+}

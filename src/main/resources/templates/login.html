@@ -6,16 +6,27 @@
 
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/navigator.css">
 
     <script src="../js/global.js"></script>
     <script src="../js/login.js"></script>
+    <script src="../js/navigator.js"></script>
 </head>
 <body>
 
+    <!-- Navigator -->
+    <div id="navigator" class='Navigation'>
+        <div class="NavigationGroup">
+          <a href="login.html" title="注册/登陆"><img src="../img/avatar.jpg" /></a>
+          <ul id="NavigationList">
+            <!-- <li><a href="life-trace" title="人生是个不断贴标签的过程">人生轨迹</a></li> -->
+          </ul>
+          <button><a href="order.html" title="我的订单中心">订单中心</a></button>
+        </div>
+    </div>
+
     <div class="LoginGroup">
         <div class="bg"></div>
-
-        <h1 class="spotlight" data-spotlight="TJ-Mall">TJ-Mall</h1>
     
         <div class="container" id="container">
             <div class="form-container sign-up-container">
@@ -41,12 +52,12 @@
             <div class="overlay-container">
                 <div class="overlay">
                     <div class="overlay-panel overlay-left">
-                        <h1>Welcome TJers!</h1>
+                        <h1 class="spotlight welcome" data-spotlight="Welcome TJers!">Welcome TJers!</h1>
                         <p>Create a new account using your personal name and password.</p>
                         <button class="ghost" id="signIn">Sign In</button>
                     </div>
                     <div class="overlay-panel overlay-right">
-                        <h1>Hello, TJers!</h1>
+                        <h1 class="spotlight hello" data-spotlight="Hello, TJers!">Hello, TJers!</h1>
                         <p>Enter your personal information and start shopping in TJ-Mall.</p>
                         <button class="ghost" id="signUp">Sign Up</button>
                     </div>

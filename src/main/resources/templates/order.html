@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../css/sectioncaption.css">
     <link rel="stylesheet" href="../css/wavesection.css">
     <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/shoppingchat.css">
+    <link rel="stylesheet" href="../css/history.css">
     <link rel="stylesheet" href="../css/socialmedia.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1838331_x3slqm5zsir.css" />
@@ -25,6 +27,7 @@
     <script src="../js/WaterRipple.js"></script>
     <script src="../js/socialmedia.js"></script>
     <script src="../js/settle.js"></script>
+    <script src="../js/shoppingchat.js"></script>
     <script src="../js/history.js"></script>
 </head>
 <body>
@@ -48,8 +51,8 @@
                 <h1>TJ Mall</h1>
                 <h3>订单中心</h3>
                 <div>
-                    <span><button class="WaterRipple">购物车</button></span>
-                    <span><button class="WaterRipple">历史订单</button></span>
+                    <span><button class="WaterRipple" onclick="window.location.href = '#order-anchor';">购物车</button></span>
+                    <span><button class="WaterRipple" onclick="window.location.href = '#history-anchor';">历史订单</button></span>
                 </div>
             </div>
         </div>
@@ -67,15 +70,15 @@
         </svg>
     </div>
 
-    <!-- Order  -->
+    <!-- ShoppingCart  -->
     <a class="NavigatorAnchor" id="order-anchor">order-anchor</a>
-    <div class="Orders">
+    <div class="ShoppingCarts">
         <div class="SectionCaptionGroup">
             <h2><label>购物车</label>🛒</h2>
             <h3>Shopping cart</h3>
         </div>
-        <div class="OrderGroup">
-            <div class='OrderCard'>
+        <div id="ShoppingCart" class="ShoppingCartGroup">
+            <!-- <div class='ShoppingCartCard'>
                 <img src="../img/Books/9.png" />
                 <div class='Text'>
                     <h1>同济大学纪念礼品校徽樱花季徽章礼盒胸针配饰logo金属贴纸高考研</h1>
@@ -84,21 +87,11 @@
                         <span>数量: <label>2</label></span>
                         <span>总计: <label>$80.00</label></span>
                     </div>
-                </div>
-            </div>
-            <div class='OrderCard'>
-                <img src="../img/Books/9.png" />
-                <div class='Text'>
-                    <h1>同济大学纪念礼品校徽樱花季徽章礼盒胸针配饰logo金属贴纸高考研</h1>
-                    <div class="PriceGroup">
-                        <span>单价: <label>$40.00</label></span>
-                        <span>数量: <label>2</label></span>
-                        <span>总计: <label>$80.00</label></span>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="settle">
+            <span>总计: <label>¥1000.00</label></span>
             <button id="SettleBtn" class="WaterRipple">结算</button>
         </div>
     </div>
@@ -150,7 +143,7 @@
         </div>
         <div id="HistoryGroup" class="HistoryGroup">
             <ul id="HistoryList" class="HistoryList">
-                <li class="HistoryCard">
+                <!-- <li class="HistoryCard">
                     <img src="../img/tongji/bg/03.png" alt="">
                     <div class="Content">
                         <ul>
@@ -164,7 +157,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
