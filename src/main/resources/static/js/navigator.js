@@ -13,6 +13,7 @@ function initNavigation(flag){
     }
     
     initNavigationList();
+    initAvatar();
 }
 
 
@@ -34,4 +35,14 @@ function initNavigationList(){
             });
         })
         .catch(error => console.log(error));
+}
+
+
+function initAvatar(){
+    let avatar = $('avatar');
+    if(sessionStorage.getItem("isLogin") === "true"){
+        avatar.src = "../img/Avatar/avatar.jpg";
+    } else {
+        avatar.src = "../img/Avatar/tongji.png";
+    }
 }

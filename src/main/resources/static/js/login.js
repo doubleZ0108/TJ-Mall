@@ -37,6 +37,12 @@ function initLogin(){
 function SignUpBtnClick(){
     let username = signUpName.value;
     let password = signUpPassword.value;
+
+    if(username==="" || password===""){
+        alert("用户名或密码不能为空");
+        return;
+    }
+
     let username_password = {
         "username": username,
         "password": password
@@ -49,7 +55,7 @@ function SignUpBtnClick(){
                 hiddenText.className = 'show';
                 container.classList.remove("right-panel-active");
             } else {
-                alert("注册失败，请重新尝试");
+                alert(result['msg'] + " (注册失败，请重新尝试)");
             }
         })
         .catch(error => console.log(error));
@@ -58,6 +64,12 @@ function SignUpBtnClick(){
 function SignInBtnClick(){
     let username = signInName.value;
     let password = signInPassword.value;
+
+    if(username==="" || password===""){
+        alert("用户名或密码不能为空");
+        return;
+    }
+
     let username_password = {
         "username": username,
         "password": password

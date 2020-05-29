@@ -1,4 +1,6 @@
 window.onload = function () {
+    initSessionStorage();
+
     initNavigation();
     initHero();
 
@@ -8,8 +10,6 @@ window.onload = function () {
     initWaveSection();
     initGift();
     initBook();
-
-    initSessionStorage();
 };
 
 function initSessionStorage(){

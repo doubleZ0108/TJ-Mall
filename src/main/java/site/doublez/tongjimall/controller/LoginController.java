@@ -45,10 +45,16 @@ public class LoginController {
         Map<String, Object> result_map = new HashMap<>();
 
         try{
-            userService.insert_user(user);
-            result_map.put("state", "true");
+            if(!userService.is_user_exist(username)){
+                userService.insert_user(user);
+                result_map.put("state", "true");
+            } else {
+                result_map.put("state", "false");
+                result_map.put("msg", "该用户已存在，请更换用户名注册 | 直接登陆");
+            }
         } catch (Exception e){
             result_map.put("state", "false");
+            result_map.put("msg", "数据库错误");
         }
 
         return result_map;
