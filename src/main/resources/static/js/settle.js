@@ -7,17 +7,20 @@ function initSettle(){
 
 function settleBtnClick() {
     if(sessionStorage.getItem("isLogin") === "true"){
+        let empty = {
 
-        connectToBackEnd(type_index_title_price_amount, "add-to-shopping-cart")
+        };
+        connectToBackEnd(empty, "settle")
             .then(result => {
                 if(result['state']){
-                    console.log("加入购物车成功", type_index_title_price_amount);
+                    alert("结算成功");
+                    window.location.href = "order";
                 } else {
-                    alert("加入购物车失败，请重新添加");
+                    alert("结算失败，请重新结算");
                 }
             })
             .catch(error => console.log(error));
     } else {
-        alert("结算失败");
+        alert("您需要登陆之后才能结算");
     }
 }

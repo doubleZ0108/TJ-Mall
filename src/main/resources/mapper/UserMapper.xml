@@ -6,23 +6,22 @@
     <!-- insert user -->
     <insert id = "insert" parameterType="site.doublez.tongjimall.entity.User">
         INSERT INTO
-            USER(ID,USERNAME,PASSWORD,AGE)
+            USER(ID,USERNAME,PASSWORD)
         VALUES
-            (#{id},#{username},#{password},#{age});
+            (#{id},#{username},#{password});
     </insert>
 
-    <!-- update user -->
-    <update id="update" parameterType="site.doublez.tongjimall.entity.User">
-        UPDATE USER SET USERNAME=#{username} , PASSWORD=#{password} , AGE = #{age} WHERE ID=#{id}
-    </update>
-
     <!-- find user -->
-    <select id="find" parameterType="int" resultType="site.doublez.tongjimall.entity.User">
-        SELECT ID,USERNAME,PASSWORD,AGE FROM USER WHERE ID=#{0}
+    <select id="find_by_id" parameterType="int" resultType="site.doublez.tongjimall.entity.User">
+        SELECT ID,USERNAME,PASSWORD FROM USER WHERE ID=#{0}
     </select>
 
-    <!-- delete user -->
-    <delete id="delete" parameterType="int">
-        DELETE FROM USER WHERE ID=#{0}
-    </delete>
+    <select id="is_user_exist" parameterType="String" resultType="boolean">
+        SELECT count(id) FROM USER WHERE USERNAME=#{username}
+    </select>
+
+    <select id="check_username_password" parameterType="site.doublez.tongjimall.entity.User" resultType="boolean">
+        SELECT count(id) FROM USER WHERE (USERNAME=#{username} AND PASSWORD=#{password})
+    </select>
+
 </mapper>

@@ -29,18 +29,5 @@ public class IndexController {
         return "index";
     }
 
-//    @RequestMapping(method = RequestMethod.GET)
-//    public String product(){
-//        return "product";
-//    }
 
-//    @PostMapping("/say")
-//    @ResponseBody
-//    public Map<String, Object> MetadataLayerConstruct(@RequestBody Map<String,Object> map){
-//
-//        Map<String, Object> result_map = new HashMap<>();
-//        result_map.put("flag", "true");
-//
-//        return result_map;
-//    }
 }

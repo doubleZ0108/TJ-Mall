@@ -75,7 +75,7 @@ function SignInBtnClick(){
 
                 window.location.href = "index.html";
             } else {
-                alert("登陆失败，请重新尝试");
+                alert(result['msg'] + " (登陆失败，请重新尝试)");
                 const hiddenTextForFail = $('fail-sign-in');
                 hiddenTextForFail.className = 'show';
             }

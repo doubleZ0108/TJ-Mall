@@ -3,7 +3,14 @@ function initHero(){
     
     setInterval(function(){
         let index = getRandomNum(1, 12);
+
         let index_str = getIndexStr(index);
-        hero.style.backgroundImage = 'url("../img/tongji/bg/' + index_str + '.png")';
+        try {
+            hero.style.backgroundImage = 'url("../img/tongji/bg/' + index_str + '.png")';
+        } catch (err){
+            console.log("random hero bg error...");
+        } finally {
+            hero.style.backgroundImage = 'url("../img/tongji/bg/' + "03" + '.png")';
+        }
     }, 10000);
 }

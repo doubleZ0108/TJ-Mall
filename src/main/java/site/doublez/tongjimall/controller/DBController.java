@@ -1,14 +1,10 @@
 package site.doublez.tongjimall.controller;
 
-import org.apache.ibatis.annotations.Param;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-import site.doublez.tongjimall.entity.User;
-import site.doublez.tongjimall.service.UserService;
+import site.doublez.tongjimall.entity.DB;
+import site.doublez.tongjimall.service.DBService;
 
 import javax.annotation.Resource;
 
@@ -21,16 +17,16 @@ import javax.annotation.Resource;
 @RestController
 @ComponentScan({"site.doublez.tongjimall.service"})
 @MapperScan("site.doublez.tongjimall.dao")
-public class UserController {
+public class DBController {
 
 //    @Autowired
     @Resource
-    private UserService userService;
+    private DBService dbService;
 
     @RequestMapping(method = RequestMethod.GET, value = "/find")
     public String find(){
-        User user = userService.find(1);
-        return user.getUsername() + " " + user.getPassword();
+        DB db = dbService.find(1);
+        return db.getUsername() + " " + db.getPassword();
     }
 
 //    @PostMapping(value = "/insert")
@@ -44,8 +40,8 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/insert")
     public String insert(){
-        User user = new User(3, "gf", "1235434543", 20);
-        userService.insert(user);
+        DB db = new DB(3, "gf", "1235434543", 20);
+        dbService.insert(db);
         return "insert";
     }
 }

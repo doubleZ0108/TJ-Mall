@@ -9,15 +9,19 @@ import lombok.Data;
  * @create: 2020/05/29
  **/
 @Data
-public class User {
+public class DB {
     private int id;
     private String username;
     private String password;
+    private int age;
 
-    public User() { }
+    public DB() {
+    }
 
-    public User(String username, String password) {
+    public DB(int id, String username, String password, int age) {
+        this.id = id;
         this.username = username;
         this.password = password;
+        this.age = age;
     }
 }

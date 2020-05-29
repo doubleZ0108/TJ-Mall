@@ -1,4 +1,5 @@
 function initHistory(){
+    //TODO 从数据库中取该用户的历史订单
     let totalNum = 5;
     let historygroup = $('HistoryGroup');
     let history = $('HistoryList');

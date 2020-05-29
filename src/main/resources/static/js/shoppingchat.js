@@ -1,6 +1,7 @@
 function initShoppingCart(){
     let shoppingcart = $('ShoppingCart');
 
+    //TODO 从数据库中取该用户的购物车内容
     let totalNum = 3;
 
     for(let i=0; i<totalNum; i++){
@@ -31,4 +32,8 @@ function initShoppingCart(){
 
         shoppingcart.appendChild(shoppingcartcard);
     }
+
+    let settle = $('settle');
+    let totalamountLabel = settle.firstElementChild.firstElementChild;
+    totalamountLabel.innerHTML = "¥" + "2000.00";
 }

@@ -1,22 +1,22 @@
 package site.doublez.tongjimall.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import site.doublez.tongjimall.entity.DB;
 import site.doublez.tongjimall.entity.User;
 
 /**
  * @program: TJ-Mall
  * @description:
  * @author: 1754060 Zhe Zhang
- * @create: 2020/05/22
+ * @create: 2020/05/29
  **/
 @Mapper
 public interface UserDao {
-
     void insert(User user);
 
-    void update(User user);
+    User find_by_id(int id);
 
-    User find(int id);
+    boolean is_user_exist(String username);
 
-    void delete(int id);
+    boolean check_username_password(User user);
 }
