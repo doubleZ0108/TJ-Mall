@@ -56,10 +56,12 @@ function initAddtoShoppingCart(type, index){
 
 function AddtoShoppingCartBtnClick(type, index){
     if(sessionStorage.getItem("isLogin") === "true"){
+        let username = sessionStorage.getItem("username");
         let title = $('ProductTitle').innerHTML;
         let price = $('price-per-one').innerHTML.substring(1);
         let amount = $('number-input').value;
-        let type_index_title_price_amount = {
+        let username_type_index_title_price_amount = {
+            "username": username,
             "type": type,
             "index": index,
             "title": title,
@@ -67,12 +69,12 @@ function AddtoShoppingCartBtnClick(type, index){
             "amount": amount
         };
 
-        connectToBackEnd(type_index_title_price_amount, "add-to-shopping-cart")
+        connectToBackEnd(username_type_index_title_price_amount, "add-to-shopping-cart")
             .then(result => {
-                if(result['state']){
-                    console.log("加入购物车成功", type_index_title_price_amount);
+                if(result['state'] === "true"){
+                    alert("加入购物车成功");
                 } else {
-                    alert("加入购物车失败，请重新添加");
+                    alert(result['msg'] + " 加入购物车失败，请重新添加");
                 }
             })
             .catch(error => console.log(error));

@@ -3,7 +3,6 @@ package site.doublez.tongjimall.service;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 import site.doublez.tongjimall.dao.UserDao;
-import site.doublez.tongjimall.entity.DB;
 import site.doublez.tongjimall.entity.User;
 
 import javax.annotation.Resource;

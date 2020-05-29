@@ -1,7 +1,6 @@
 package site.doublez.tongjimall.dao;
 
 import org.apache.ibatis.annotations.Mapper;
-import site.doublez.tongjimall.entity.DB;
 import site.doublez.tongjimall.entity.User;
 
 /**
@@ -19,6 +18,4 @@ public interface UserDao {
     boolean is_user_exist(String username);
 
     boolean check_username_password(User user);
-
-
 }

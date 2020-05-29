@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="site.doublez.tongjimall.dao.ProductDao">
+
+    <insert id = "insert_product" parameterType="site.doublez.tongjimall.entity.Product">
+        INSERT INTO
+            PRODUCT(ID,USERNAME,PRODUCTTYPE,PRODUCTINDEX,TITLE,PRICE,AMOUNT)
+        VALUES
+            (#{id},#{username},#{type},#{index},#{title},#{price},#{amount});
+    </insert>
+
+    <select id="find_by_username" parameterType="String" resultType="site.doublez.tongjimall.entity.Product">
+        SELECT * FROM PRODUCT where username=#{username};
+    </select>
+
+</mapper>
