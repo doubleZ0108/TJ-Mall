@@ -82,11 +82,10 @@ public class LoginController {
                 result_map.put("msg", "该用户不存在");
             }
         } catch (Exception e){
+            e.printStackTrace();
             result_map.put("state", "false");
             result_map.put("msg", "数据库错误");
         }
-
-        System.out.println(result_map);
 
         return result_map;
     }

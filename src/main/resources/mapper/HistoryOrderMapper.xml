@@ -5,17 +5,17 @@
 
     <insert id = "insert_order" parameterType="site.doublez.tongjimall.entity.HistoryOrder">
         INSERT INTO
-            HISTORYORDER(ID,USERNAME,ORDERTIME,TITLE,IMGSRC,AMOUNT)
+            HistoryOrder(ID,USERNAME,ORDERTIME,TITLE,IMGSRC,AMOUNT)
         VALUES
             (#{id},#{username},#{ordertime},#{title},#{imgsrc},#{amount});
     </insert>
 
     <select id="select_history" parameterType="String" resultType="site.doublez.tongjimall.entity.HistoryOrder">
         SELECT *
-        FROM HISTORYORDER
+        FROM HistoryOrder
         WHERE (USERNAME=#{username} AND ORDERTIME IN (
             SELECT ORDERTIME
-            FROM HISTORYORDER
+            FROM HistoryOrder
             GROUP BY ORDERTIME
             ORDER BY ORDERTIME ASC
         ));
