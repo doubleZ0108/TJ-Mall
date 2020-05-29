@@ -19,22 +19,25 @@ public class ProductController {
         return "product";
     }
 
+    @RequestMapping(value = "product.html", method = RequestMethod.GET)
+    public String productpage(){
+        return "product";
+    }
 
     @PostMapping("/add-to-shopping-cart")
     @ResponseBody
-    public Map<String, Object> SignIn(@RequestBody Map<String,Object> map){
+    public Map<String, Object> AddToShoppingCart(@RequestBody Map<String,Object> map){
         String type = map.get("type").toString();
         String index = map.get("index").toString();
         String title = map.get("title").toString();
         String price = map.get("price").toString();
         String amount = map.get("amount").toString();
 
-        System.out.println(type + title + price + amount);
+        System.out.println(type + index + title + price + amount);
 
         Map<String, Object> result_map = new HashMap<>();
         result_map.put("state", "true");
 
         return result_map;
     }
-
 }

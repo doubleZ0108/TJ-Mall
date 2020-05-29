@@ -13,5 +13,8 @@ window.onload = function () {
 };
 
 function initSessionStorage(){
-    sessionStorage.setItem("isLogin", "false");
+    console.log(sessionStorage);
+    if(sessionStorage.getItem("isLogin") !== "true"){
+        sessionStorage.setItem("isLogin", "false");
+    }
 }
