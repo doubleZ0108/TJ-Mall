@@ -20,8 +20,8 @@ public class UserService {
     @Resource
     private UserDao userDao;
 
-    public void insert(User user){
-        userDao.insert(user);
+    public void insert_user(User user){
+        userDao.insert_user(user);
     }
 
     public User find_by_id(int id){

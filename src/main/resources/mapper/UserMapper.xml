@@ -4,7 +4,7 @@
 <mapper namespace="site.doublez.tongjimall.dao.UserDao">
 
     <!-- insert user -->
-    <insert id = "insert" parameterType="site.doublez.tongjimall.entity.User">
+    <insert id = "insert_user" parameterType="site.doublez.tongjimall.entity.User">
         INSERT INTO
             USER(ID,USERNAME,PASSWORD)
         VALUES

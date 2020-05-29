@@ -44,7 +44,7 @@ function SignUpBtnClick(){
 
     connectToBackEnd(username_password, "sign-up")
         .then(result => {
-            if(result['state']){
+            if(result['state'] === 'true'){
                 const hiddenText = $('success-sign-up');
                 hiddenText.className = 'show';
                 container.classList.remove("right-panel-active");
@@ -65,13 +65,13 @@ function SignInBtnClick(){
 
     connectToBackEnd(username_password, "sign-in")
         .then(result => {
-            if (result['state']) {
+            console.log(result);
+            if (result['state'] === "true") {
                 const hiddenTextForSuccess = $('success-sign-in');
                 hiddenTextForSuccess.className = 'show';
 
                 sessionStorage.setItem("isLogin", "true");
-                // document.cookie = "isLogin=true";
-                // localStorage.setItem("isLogin", "true");
+                sessionStorage.setItem("username", username);
 
                 window.location.href = "index.html";
             } else {

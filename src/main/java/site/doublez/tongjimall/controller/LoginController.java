@@ -39,12 +39,17 @@ public class LoginController {
     @PostMapping("/sign-up")
     @ResponseBody
     public Map<String, Object> SignUp(@RequestBody Map<String,Object> map){
-        String data = map.get("username").toString();
+        String username = map.get("username").toString();
         String password = map.get("password").toString();
-        System.out.println(data + password);
-
+        User user = new User(username, password);
         Map<String, Object> result_map = new HashMap<>();
-        result_map.put("state", "true");
+
+        try{
+            userService.insert_user(user);
+            result_map.put("state", "true");
+        } catch (Exception e){
+            result_map.put("state", "false");
+        }
 
         return result_map;
     }
@@ -58,16 +63,21 @@ public class LoginController {
 
         Map<String, Object> result_map = new HashMap<>();
 
-        if(userService.is_user_exist(username)){
-            if(userService.check_username_password(user)){
-                result_map.put("state", "true");
+        try {
+            if(userService.is_user_exist(username)){
+                if(userService.check_username_password(user)){
+                    result_map.put("state", "true");
+                } else {
+                    result_map.put("state", "false");
+                    result_map.put("msg", "密码错误");
+                }
             } else {
                 result_map.put("state", "false");
-                result_map.put("msg", "密码错误");
+                result_map.put("msg", "该用户不存在");
             }
-        } else {
+        } catch (Exception e){
             result_map.put("state", "false");
-            result_map.put("msg", "该用户不存在");
+            result_map.put("msg", "数据库错误");
         }
 
         System.out.println(result_map);
