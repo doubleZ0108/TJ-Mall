@@ -118,3 +118,28 @@ function connectToBackEnd(frontendObj, url){
         }
     });
 }
+
+
+// 功能：将浮点数四舍五入，取小数点后2位，如果不足2位则补0,这个函数返回的是字符串的格式
+function toTwoDecimal(x)
+{
+    var f_x = parseFloat(x);
+    if (isNaN(f_x))
+    {
+        alert('function:changeTwoDecimal->parameter error');
+        return false;
+    }
+    f_x = Math.round(f_x*100)/100;
+    var s_x = f_x.toString();
+    var pos_decimal = s_x.indexOf('.');
+    if (pos_decimal < 0)
+    {
+        pos_decimal = s_x.length;
+        s_x += '.';
+    }
+    while (s_x.length <= pos_decimal + 2)
+    {
+        s_x += '0';
+    }
+    return s_x;
+}

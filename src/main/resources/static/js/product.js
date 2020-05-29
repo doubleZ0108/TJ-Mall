@@ -58,18 +58,21 @@ function AddtoShoppingCartBtnClick(type, index){
     if(sessionStorage.getItem("isLogin") === "true"){
         let username = sessionStorage.getItem("username");
         let title = $('ProductTitle').innerHTML;
+        let imgsrc = $('ProductImg').src;
+        imgsrc = imgsrc.substring(imgsrc.indexOf("img/"))
         let price = $('price-per-one').innerHTML.substring(1);
         let amount = $('number-input').value;
-        let username_type_index_title_price_amount = {
+        let username_type_index_title_imgsrc_price_amount = {
             "username": username,
             "type": type,
             "index": index,
             "title": title,
+            "imgsrc": imgsrc,
             "price": price,
             "amount": amount
         };
 
-        connectToBackEnd(username_type_index_title_price_amount, "add-to-shopping-cart")
+        connectToBackEnd(username_type_index_title_imgsrc_price_amount, "add-to-shopping-cart")
             .then(result => {
                 if(result['state'] === "true"){
                     alert("加入购物车成功");

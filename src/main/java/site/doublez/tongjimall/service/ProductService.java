@@ -6,6 +6,7 @@ import site.doublez.tongjimall.dao.ProductDao;
 import site.doublez.tongjimall.entity.Product;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 
 /**
  * @program: TJ-Mall
@@ -23,7 +24,7 @@ public class ProductService {
         productDao.insert_product(product);
     }
 
-    public Product find_by_username(String username){
-        return productDao.find_by_username(username);
+    public ArrayList<Product> select_shoppingcart_by_username(String username){
+        return productDao.select_shoppingcart_by_username(username);
     }
 }
