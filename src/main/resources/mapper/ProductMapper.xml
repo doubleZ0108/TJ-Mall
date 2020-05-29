@@ -14,4 +14,8 @@
         SELECT * FROM PRODUCT WHERE username=#{username}
     </select>
 
+    <!-- delete product -->
+    <delete id="delete_by_username" parameterType="String">
+        DELETE FROM PRODUCT WHERE username=#{username}
+    </delete>
 </mapper>

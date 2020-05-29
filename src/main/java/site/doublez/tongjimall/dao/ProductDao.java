@@ -16,4 +16,6 @@ public interface ProductDao {
     void insert_product(Product product);
 
     ArrayList<Product> select_shoppingcart_by_username(String username);
+
+    void delete_by_username(String username);
 }

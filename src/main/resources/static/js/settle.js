@@ -7,16 +7,16 @@ function initSettle(){
 
 function settleBtnClick() {
     if(sessionStorage.getItem("isLogin") === "true"){
-        let empty = {
-
+        let username = {
+            "username": sessionStorage.getItem("username")
         };
-        connectToBackEnd(empty, "settle")
+        connectToBackEnd(username, "settle")
             .then(result => {
-                if(result['state']){
+                if(result['state'] === 'true'){
                     alert("结算成功");
                     window.location.href = "order";
                 } else {
-                    alert("结算失败，请重新结算");
+                    alert(result['msg'] + "结算失败，请重新结算");
                 }
             })
             .catch(error => console.log(error));

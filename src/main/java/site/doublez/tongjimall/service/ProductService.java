@@ -27,4 +27,8 @@ public class ProductService {
     public ArrayList<Product> select_shoppingcart_by_username(String username){
         return productDao.select_shoppingcart_by_username(username);
     }
+
+    public void delete_by_username(String username){
+        productDao.delete_by_username(username);
+    }
 }

@@ -88,6 +88,34 @@
                         <span>总计: <label>$80.00</label></span>
                     </div>
                 </div> -->
+            <div id="empty-shoppingcart" class="empty-shoppingcart">
+                <div class="container">
+                    <div class="loader">
+                        <div class="liquid">
+                            <span style="--i:1;"></span>
+                            <span style="--i:2;"></span>
+                            <span style="--i:3;"></span>
+                            <span style="--i:4;"></span>
+                            <span style="--i:5;"></span>
+                            <span style="--i:6;"></span>
+                            <span style="--i:7;"></span>
+                        </div>
+                        <div id="liquid-bar" class="bar"></div>
+                    </div>
+                    <div id="liquid-text" class="text">您的购物车为空</div>
+                </div>
+
+                <svg class="liquid-svg">
+                    <filter id="gooey">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+                        <feColorMatrix values="
+                            1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 20 -10
+                            "/>
+                    </filter>
+                </svg>
             </div>
         </div>
         <div id="settle" class="settle">
