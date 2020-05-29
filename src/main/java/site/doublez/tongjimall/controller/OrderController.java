@@ -89,16 +89,17 @@ public class OrderController {
             ArrayList<HistoryOrder> historyOrderArrayList = historyOrderService.select_history(username);
 
             ArrayList<ArrayList<HistoryOrder>> resultList = new ArrayList<ArrayList<HistoryOrder>>();
-            Date bufdate = historyOrderArrayList.get(0).getOrdertime();
-            resultList.add(new ArrayList<HistoryOrder>());
-            for(int i=0;i<historyOrderArrayList.size();++i){
-                if(!historyOrderArrayList.get(i).getOrdertime().equals(bufdate)){
-                    bufdate = historyOrderArrayList.get(i).getOrdertime();
-                    resultList.add(new ArrayList<HistoryOrder>());
+            if(!historyOrderArrayList.isEmpty()){
+                Date bufdate = historyOrderArrayList.get(0).getOrdertime();
+                resultList.add(new ArrayList<HistoryOrder>());
+                for(int i=0;i<historyOrderArrayList.size();++i){
+                    if(!historyOrderArrayList.get(i).getOrdertime().equals(bufdate)){
+                        bufdate = historyOrderArrayList.get(i).getOrdertime();
+                        resultList.add(new ArrayList<HistoryOrder>());
+                    }
+                    resultList.get(resultList.size()-1).add(historyOrderArrayList.get(i));
                 }
-                resultList.get(resultList.size()-1).add(historyOrderArrayList.get(i));
             }
-
             result_map.put("history", resultList);
             result_map.put("state", "true");
         } catch (Exception e){
