@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="site.doublez.tongjimall.dao.HistoryOrderDao">
+
+    <insert id = "insert_order" parameterType="site.doublez.tongjimall.entity.HistoryOrder">
+        INSERT INTO
+            HISTORYORDER(ID,USERNAME,ORDERTIME,TITLE,IMGSRC,AMOUNT)
+        VALUES
+            (#{id},#{username},#{ordertime},#{title},#{imgsrc},#{amount});
+    </insert>
+
+    <select id="select_history" parameterType="String" resultType="site.doublez.tongjimall.entity.HistoryOrder">
+        SELECT *
+        FROM HISTORYORDER
+        WHERE (USERNAME=#{username} AND ORDERTIME IN (
+            SELECT ORDERTIME
+            FROM HISTORYORDER
+            GROUP BY ORDERTIME
+            ORDER BY ORDERTIME ASC
+        ));
+    </select>
+</mapper>

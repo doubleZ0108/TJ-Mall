@@ -2,6 +2,10 @@ package site.doublez.tongjimall.entity;
 
 import lombok.Data;
 
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -11,7 +15,7 @@ import java.util.Date;
  * @create: 2020/05/29
  **/
 @Data
-public class Order {
+public class HistoryOrder {
     private int id;
     private String username;
     private Date ordertime;
@@ -19,16 +23,20 @@ public class Order {
     private String imgsrc;
     private int amount;
 
-    public Order(int id, String username, Date ordertime, String title, String imgsrc, int amount) {
+    public HistoryOrder(int id, String username, Timestamp ordertime, String title, String imgsrc, int amount) throws ParseException {
         this.id = id;
         this.username = username;
-        this.ordertime = ordertime;
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date=new Date(ordertime.getTime());
+        this.ordertime = simpleDateFormat.parse(simpleDateFormat.format(date));
+
         this.title = title;
         this.imgsrc = imgsrc;
         this.amount = amount;
     }
 
-    public Order(String username, Date ordertime, String title, String imgsrc, int amount) {
+    public HistoryOrder(String username, Date ordertime, String title, String imgsrc, int amount) {
         this.username = username;
         this.ordertime = ordertime;
         this.title = title;

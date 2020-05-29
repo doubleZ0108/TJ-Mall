@@ -59,6 +59,7 @@
 }
 
 .HistoryGroup .Content li{
+    width: 100%;
     display: grid;
     grid-template-columns: 0.3fr 1fr;
     align-items: center;
@@ -70,6 +71,7 @@
     width: 80%;
     height: 100%;
     overflow: hidden;
+    align-self: center;
 }
 
 .HistoryGroup .Content .Text h2 {

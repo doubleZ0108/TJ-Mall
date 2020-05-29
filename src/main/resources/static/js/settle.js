@@ -1,8 +1,6 @@
 function initSettle(){
     let settle = $('SettleBtn');
-    settle.addEventListener('click',function(){
-        settleBtnClick();
-    });
+    settle.addEventListener('click', settleBtnClick);
 }
 
 function settleBtnClick() {

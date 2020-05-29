@@ -4,9 +4,9 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import site.doublez.tongjimall.entity.Order;
+import site.doublez.tongjimall.entity.HistoryOrder;
 import site.doublez.tongjimall.entity.Product;
-import site.doublez.tongjimall.service.OrderService;
+import site.doublez.tongjimall.service.HistoryOrderService;
 import site.doublez.tongjimall.service.ProductService;
 
 import javax.annotation.Resource;
@@ -32,7 +32,7 @@ public class OrderController {
     private ProductService productService;
 
     @Resource
-    private OrderService orderService;
+    private HistoryOrderService historyOrderService;
 
     @RequestMapping(value = "order", method = RequestMethod.GET)
     public String order(){
@@ -61,8 +61,8 @@ public class OrderController {
 
             // (2) 将订单加入历史订单
             productArrayList.forEach(product -> {
-                Order order = new Order(username, ordettime, product.getTitle(), product.getImgsrc(), product.getAmount());
-                orderService.insert_order(order);
+                HistoryOrder historyOrder = new HistoryOrder(username, ordettime, product.getTitle(), product.getImgsrc(), product.getAmount());
+                historyOrderService.insert_order(historyOrder);
             });
 
             // (3) 清空购物车
@@ -77,4 +77,37 @@ public class OrderController {
 
         return result_map;
     }
+
+    @PostMapping("/history")
+    @ResponseBody
+    public Map<String, Object> History(@RequestBody Map<String,Object> map) throws ParseException {
+        String username = map.get("username").toString();
+
+        Map<String, Object> result_map = new HashMap<>();
+
+        try {
+            ArrayList<HistoryOrder> historyOrderArrayList = historyOrderService.select_history(username);
+
+            ArrayList<ArrayList<HistoryOrder>> resultList = new ArrayList<ArrayList<HistoryOrder>>();
+            Date bufdate = historyOrderArrayList.get(0).getOrdertime();
+            resultList.add(new ArrayList<HistoryOrder>());
+            for(int i=0;i<historyOrderArrayList.size();++i){
+                if(!historyOrderArrayList.get(i).getOrdertime().equals(bufdate)){
+                    bufdate = historyOrderArrayList.get(i).getOrdertime();
+                    resultList.add(new ArrayList<HistoryOrder>());
+                }
+                resultList.get(resultList.size()-1).add(historyOrderArrayList.get(i));
+            }
+
+            result_map.put("history", resultList);
+            result_map.put("state", "true");
+        } catch (Exception e){
+            e.printStackTrace();
+            result_map.put("state", "false");
+            result_map.put("msg", "数据库错误");
+        }
+
+        return result_map;
+    }
+
 }
