@@ -13,8 +13,8 @@
     margin: auto 0;
     border-radius: 30px;
     box-shadow: -3px -3px 7px #eee,
-                3px 3px 5px rgba(94, 104, 121, 0.288);
-    align-self: center;   
+    3px 3px 5px rgba(94, 104, 121, 0.288);
+    align-self: center;
     z-index: 99;
     display: grid;
     grid-template-columns: 0.2fr 1fr;
@@ -22,7 +22,7 @@
 }
 .ShoppingCartCard:hover {
     box-shadow: inset -3px -3px 7px #ffffff73,
-                inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+    inset 3px 3px 5px rgba(94, 104, 121, 0.288);
 }
 
 .ShoppingCartCard img {
@@ -37,6 +37,9 @@
 }
 
 .ShoppingCartCard .Text {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     align-self: center;
     margin: auto;
     display: grid;
@@ -81,13 +84,13 @@
     -webkit-text-fill-color: transparent;
 }
 
-
 @media (max-width:750px) {
     .ShoppingCartCard {
         width: 100%;
         height: 150px;
         align-self: center;
         grid-template-columns: 0.6fr 1fr;
+        grid-gap: 0;
     }
 
     .ShoppingCartCard img {
@@ -98,14 +101,31 @@
 
     .ShoppingCartCard .Text {
         grid-template-rows: repeat(2, 1fr);
+        grid-gap: 0;
     }
 
     .ShoppingCartCard h1 {
         margin: auto;
-        font-size: 30px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        font-size: 20px;
     }
     .ShoppingCartCard p {
         margin: 0 10px;
+    }
+    .ShoppingCartCard .Text .PriceGroup {
+        align-self: flex-start;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .ShoppingCartCard .Text .PriceGroup span {
+        margin: 0 auto auto 0;
+        font-size: 10px;
+    }
+    .ShoppingCartCard .Text .PriceGroup label {
+        display: block;
+        font-size: 10px;
     }
 }
 
@@ -159,6 +179,7 @@
     width: 200px;
     height: 200px;
     filter: url(#gooey);
+    -webkit-filter: url(#gooey);
 }
 
 .empty-shoppingcart .loader span {

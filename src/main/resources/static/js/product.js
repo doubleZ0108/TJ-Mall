@@ -62,6 +62,10 @@ function AddtoShoppingCartBtnClick(type, index){
         imgsrc = imgsrc.substring(imgsrc.indexOf("img/"))
         let price = $('price-per-one').innerHTML.substring(1);
         let amount = $('number-input').value;
+        if(amount < 1 || amount > 10){
+            alert("最多一次将10个商品加入购物车");
+            return;
+        }
         let username_type_index_title_imgsrc_price_amount = {
             "username": username,
             "type": type,

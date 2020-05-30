@@ -69,7 +69,7 @@
 .HistoryGroup .Content li img {
     margin: 5px auto;
     width: 80%;
-    height: 100%;
+    max-height: 100px;
     overflow: hidden;
     align-self: center;
 }
@@ -90,4 +90,11 @@
 .HistoryGroup .Content .Text label {
     color: rgba(0,0,0,0.6);
     font-weight: lighter;
+}
+
+
+@media (max-width: 600px){
+    .HistoryGroup {
+        height: 40vh;
+    }
 }

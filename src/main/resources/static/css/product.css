@@ -145,3 +145,42 @@
         transform: scale3d(1, 1, 1);
     }
 }
+
+@media (max-width: 600px){
+    .ProductGroup {
+        grid-gap: 0;
+        grid-template-rows: 1fr 1.5fr 1fr;
+    }
+    .ProductGroup .ProductTitle {
+        width: 100%;
+        overflow: hidden;
+        font-size: 25px;
+    }
+    .ProductGroup .ProductInfo img {
+        max-width: 150px;
+    }
+    .ProductGroup .ProductTextGroup {
+        text-align: center;
+        display: grid;
+        grid-template-rows: repeat(2,auto);
+        grid-gap: 20px;
+        align-items: center;
+    }
+    .ProductGroup .ProductPrice {
+        margin: auto;
+    }
+    .ProductGroup .ProductPrice label {
+        display: block;
+        font-size: 25px;
+    }
+    .ProductGroup .ProductAmount {
+        margin: auto;
+    }
+    .ProductGroup .ProductAmount input {
+        display: block;
+        margin: 0 auto;
+    }
+    .ProductGroup .ProductAmount label {
+        display: none;
+    }
+}

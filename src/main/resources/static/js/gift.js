@@ -7,7 +7,7 @@ function initGift(){
                 giftcardDiv.classList.add('GiftCard');
                 let giftcardImg = $c('img');
                 giftcardImg.src = "../img/Gifts/" + elem.imgsrc;
-                giftcardImg.style.height = 200 + getRandomNum(0, 50) + getRandomNum(0, 50) + "px";
+                giftcardImg.style.height = parseInt(giftcardImg.style.height) + getRandomNum(0, 50) + getRandomNum(0, 50) + "px";
                 let giftcardtextgroupDiv = $c('div');
                 giftcardtextgroupDiv.classList.add('GiftCardTextGroup');
                 let giftcardH3 = $c('h3');

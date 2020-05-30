@@ -18,7 +18,7 @@
 .GiftCard img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 200px;
 
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -81,4 +81,20 @@
 .GiftCard:hover .GiftCardTextGroup .GiftCardPrice {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .GiftCard img {
+        height: 100px;
+    }
+    .GiftCard .GiftCardTextGroup .GiftCardTitle {
+        font-size: 10px;
+    }
+    .GiftCard .GiftCardTextGroup .GiftCardIntro {
+        font-size: 8px;
+    }
+    .GiftCard .GiftCardTextGroup .GiftCardPrice {
+        font-size: 8px;
+        border-radius: 5px;
+    }
 }

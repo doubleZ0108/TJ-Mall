@@ -45,7 +45,9 @@ function initHistory(){
                                 let contentP1 = $c('p');
                                 contentP1.innerHTML = "购买数量: " + "<label>" + elem.amount + "</label>";
                                 let contentP2 = $c('p');
-                                contentP2.innerHTML = "购买时间: " + "<label>" + elem.ordertime + "</label>";
+                                contentP2.innerHTML = "购买时间: " + "<label>" +
+                                    elem.ordertime.substring(0,elem.ordertime.indexOf(".")).replace("T", " ")
+                                    + "</label>";
                                 contentTextDiv.appendChild(contentH2);
                                 contentTextDiv.appendChild(contentP1);
                                 contentTextDiv.appendChild(contentP2);

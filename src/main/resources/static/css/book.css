@@ -83,3 +83,9 @@
 .BookGroup .BookCard:hover .BookCardBottom p {
     display: block;
 }
+
+@media (max-width: 600px) {
+    .BookGroup {
+        grid-template-columns: repeat(1, auto);
+    }
+}
