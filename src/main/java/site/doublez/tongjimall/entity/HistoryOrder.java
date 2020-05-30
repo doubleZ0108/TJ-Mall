@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  * @program: TJ-Mall
- * @description:
+ * @description: 历史订单实体
  * @author: 1754060 Zhe Zhang
  * @create: 2020/05/29
  **/

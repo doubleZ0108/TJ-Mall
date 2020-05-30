@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * @program: TJ-Mall
- * @description:
+ * @description: 主界面controller
  * @author: 1754060 Zhe Zhang
  * @create: 2020/05/22
  **/

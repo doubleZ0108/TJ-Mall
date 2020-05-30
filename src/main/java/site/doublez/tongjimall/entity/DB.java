@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @program: TJ-Mall
- * @description:
+ * @description: 测试DB实体
  * @author: 1754060 Zhe Zhang
  * @create: 2020/05/29
  **/

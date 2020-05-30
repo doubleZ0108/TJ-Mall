@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 /**
  * @program: TJ-Mall
- * @description:
+ * @description: 测试DB service
  * @author: 1754060 Zhe Zhang
  * @create: 2020/05/22
  **/

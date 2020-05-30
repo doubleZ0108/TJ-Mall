@@ -1,4 +1,3 @@
-let buf = $('buf');
 function initWaveSection() {
     setInterval(function(){
         readJson("tongji.json")

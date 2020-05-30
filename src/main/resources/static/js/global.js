@@ -3,7 +3,7 @@ let CREATIVE_PRODUCTS_IMG_PATH = "../img/CreativeProducts/";
 
 /**
     $('container')
-
+    通过id获取HTMKL dom对象
  * @param id
  * @returns {HTMLElement}
  */
@@ -11,6 +11,11 @@ function $(id){
     return document.getElementById(id);
 }
 
+/**
+ * 创建HTML dom对象
+ * @param type
+ * @returns {HTMLElement}
+ */
 function $c(type){
     return document.createElement(type);
 }
@@ -30,8 +35,13 @@ function setStyle(obj, css){
     }
 }
 
-/* 获取min-max间的随机数 */
-function getRandomNum(minNum,maxNum){ 
+/**
+ *  获取min-max间的随机数
+ * @param minNum
+ * @param maxNum
+ * @returns {number}
+ */
+function getRandomNum(minNum,maxNum){
     switch(arguments.length){ 
         case 1: 
             return parseInt(Math.random()*minNum+1,10); 
@@ -45,7 +55,11 @@ function getRandomNum(minNum,maxNum){
     } 
 }
 
-/* 解析url */
+/**
+ * 解析url
+ * @param key
+ * @returns {string|null}
+ */
 function getParams(key) {
     var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
@@ -55,12 +69,22 @@ function getParams(key) {
     return null;
 }
 
+
+/**
+ * 获取数字的字符串格式
+ * @param index
+ * @returns {string}
+ */
 function getIndexStr(index){
     return (index<10 ? "0"+index.toString() : index.toString());
 }
 
 
-/*异步 读取json 返回json内容 */
+/**
+ * 异步 读取json 返回json内容
+ * @param filename
+ * @returns {Promise<unknown>}
+ */
 function readJson(filename){
     return new Promise((resolve, reject) => {
         let request;
@@ -89,6 +113,12 @@ function readJson(filename){
     });
 }
 
+/**
+ * Ajax
+ * @param frontendObj
+ * @param url
+ * @returns {Promise<unknown>}
+ */
 function connectToBackEnd(frontendObj, url){
     return new Promise((resolve, reject) => {
         let backendObj;
@@ -120,7 +150,11 @@ function connectToBackEnd(frontendObj, url){
 }
 
 
-// 功能：将浮点数四舍五入，取小数点后2位，如果不足2位则补0,这个函数返回的是字符串的格式
+/**
+ * 将浮点数四舍五入，取小数点后2位，如果不足2位则补0
+ * @param x
+ * @returns {string|boolean}
+ */
 function toTwoDecimal(x)
 {
     var f_x = parseFloat(x);

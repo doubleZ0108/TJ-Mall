@@ -5,7 +5,7 @@ import site.doublez.tongjimall.entity.DB;
 
 /**
  * @program: TJ-Mall
- * @description:
+ * @description: 测试DB 访问数据库接口
  * @author: 1754060 Zhe Zhang
  * @create: 2020/05/22
  **/
