@@ -4,37 +4,11 @@
 
 🌐 [同济商城 | TJ-Mall](http://101.132.174.191:8080/)
 
-🎥 [网页视频]()
+🎥 [网页视频](https://www.bilibili.com/video/BV1U5411s7DS/)
 
 [toc]
 
 ------
-
-## 开发环境
-
-- **操作系统**
-  
-  - **开发环境**：macOS Mojave 10.15.4
-  - **部署环境**：Ubuntu 16.04.6 LTS
-  
-- **IDE**
-  - Visual Studio Code 1.45.1
-  - IntelliJ IDEA 2019.3.2
-  
-- **开发语言**
-  - HTML5
-  - CSS3
-  - JavaScript
-  - Java
-  
-- **数据库 **: mysql 8.0.20
-
-- **框架技术**
-
-  - 前端：原生HTML + CSS + JavaScript
-  - 后端：SpringBoot + Maven + Mysql + MyBatis
-
-  > 部分图片资源来自网络，侵删
 
 <br/>
 
@@ -75,6 +49,8 @@
 
 - ❗️远程部署
 
+  > 请访问http://101.132.174.191:8080/
+  >
   > 域名已提交申请，正在备案
 
 - ❗️适配电脑 平板 手机不同平台
@@ -86,11 +62,18 @@
 【测试用例】
 
 1. 历史订单丰富用户
-   - 用户名: tongji
-   - 密码: tongji
+
+   | Item   | Value  |
+   | ------ | ------ |
+   | 用户名 | tongji |
+   | 密码   | tongji |
+
 2. 空用户
-   - 用户名: empty
-   - 密码: empty
+
+   | Item   | Value |
+   | ------ | ----- |
+   | 用户名 | fresh |
+   | 密码   | fresh |
 
 <br/>
 
@@ -98,23 +81,23 @@
 
 ### 主界面
 
-<img src="README.assets/index.png" alt="index" style="zoom: 25%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-435d79198404a53b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="index" style="zoom: 80%;" />
 
 #### 同济创意
 
-<img src="README.assets/creativeproduct.png" alt="creativeproduct" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-845383d021c1f661.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="creativeproduct" width="85%;" />
 
 #### 同济礼物
 
-<img src="README.assets/gift.png" alt="gift" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-9992e1936a8b6401.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="gift" width="85%;" />
 
 #### 同济出版
 
-<img src="README.assets/book.png" alt="book" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-399ea6a32a200465.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="book" width="85%;" />
 
 #### 社交媒体
 
-<img src="README.assets/social.png" alt="social" width="60%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-9f78a8a140563850.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="social" width="60%;" />
 
 ------
 
@@ -122,47 +105,77 @@
 
 #### 注册
 
-<img src="README.assets/signin.png" alt="signin" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-426ae539a1c90f1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="signin" width="85%;" />
 
 #### 登陆
 
-<img src="README.assets/signup.png" alt="signup" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-df428cc4cb65cb36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="signup" width="85%;" />
 
 ------
 
 ### 商品购买
 
-<img src="README.assets/product.png" alt="product" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-4b3ec4e8ab2cf7e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="product" width="85%;" />
 
 ------
 
 ### 订单中心
 
-<img src="README.assets/order.png" alt="order" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-05566c4624e8399c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="order" width="85%;" />
 
 #### 购物车
 
 未登陆
 
-<img src="README.assets/shoppingcart-none.png" alt="shoppingcart-none" width="50%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-6997ad7f573aa8e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="shoppingcart-none" width="50%;" />
 
 已登陆
 
-<img src="README.assets/shopping.png" alt="shopping" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-defbad879e174b35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="shopping" width="85%;" />
 
 #### 历史订单
 
 未登陆
 
-<img src="README.assets/history-none.png" alt="history-none" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-3f2cc4041ed13912.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="history-none" width="85%;" />
 
 已登陆
 
-<img src="README.assets/history.png" alt="history" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-92f966bcc1008fbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="history" width="85%;" />
 
 ### 错误界面
 
-<img src="README.assets/error.png" alt="error" width="85%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-6e1a6a8162ccb19d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="error" width="85%;" />
+
+<br/>
+
+## 开发环境
+
+- **操作系统**
+
+  - **开发环境**：macOS Mojave 10.15.4
+  - **部署环境**：Ubuntu 16.04.6 LTS
+
+- **IDE**
+
+  - Visual Studio Code 1.45.1
+  - IntelliJ IDEA 2019.3.2
+
+- **开发语言**
+
+  - HTML5
+  - CSS3
+  - JavaScript
+  - Java
+
+- **数据库 **: mysql 8.0.20
+
+- **框架技术**
+
+  - 前端：原生HTML + CSS + JavaScript
+  - 后端：SpringBoot + Maven + Mysql + MyBatis
+
+  > 部分图片资源来自网络，侵删
 
 <br/>
 
