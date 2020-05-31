@@ -1,7 +1,7 @@
 {
     "socialmedia": [
         {
-            "href": "https://github.com/doubleZ0108/TJ-Mall",
+            "href": "https://github.com/doubleZ0108/",
             "title": "GitHub",
             "class": "icon-GitHub",
             "color": "#000"
@@ -13,13 +13,13 @@
             "color": "rgb(73, 168, 243)"
         },
         {
-            "href": "/",
+            "href": "https://www.bilibili.com/video/BV1U5411s7DS/",
             "title": "网站视频",
             "class": "icon--VideoCamera",
             "color": "rgb(175,110,195)"
         },
         {
-            "href": "/",
+            "href": "https://github.com/doubleZ0108/TJ-Mall/wiki",
             "title": "项目文档",
             "class": "icon-wendang-",
             "color": "rgb(245,188,97)"
