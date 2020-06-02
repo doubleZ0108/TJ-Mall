@@ -6,6 +6,8 @@
 
 🎥 [网页视频](https://www.bilibili.com/video/BV1U5411s7DS/)
 
+ 📦[tongji-mall-0.0.1-SNAPSHOT.jar](https://github.com/doubleZ0108/TJ-Mall/blob/master/tongji-mall-0.0.1-SNAPSHOT.jar)
+
 ##### Table of Contents
 
    * [同济商城 | TJ-Mall](#同济商城--tj-mall)
