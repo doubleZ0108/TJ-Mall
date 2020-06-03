@@ -115,7 +115,7 @@
 
 ### 主界面
 
-<img src="https://upload-images.jianshu.io/upload_images/12014150-435d79198404a53b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="index" style="zoom: 80%;" />
+<img src="https://upload-images.jianshu.io/upload_images/12014150-435d79198404a53b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="index" width="85%;" />
 
 #### 同济创意
 
@@ -511,7 +511,7 @@ CREATE TABLE `TJ-Mall`.`User` (
 
 | Item            | Info                                                |
 | --------------- | --------------------------------------------------- |
-| **Name**        | Zhe Zhang(张喆)                                     |
+| **Name**        | 张喆                                                |
 | **ID**          | 1754060                                             |
 | **Adviser**     | 金伟祖老师                                          |
 | **Course Name** | Script Programming                                  |
@@ -632,4 +632,10 @@ CREATE TABLE `TJ-Mall`.`User` (
 │               └── product.html
 └── tongji-mall.iml
 ```
+
+------
+
+<center>Copyright © doubleZ Tongji University</center>
+
+<center>All Right Reversed</center>
 
