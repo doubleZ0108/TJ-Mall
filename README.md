@@ -2,9 +2,9 @@
 
 # 同济商城 | TJ-Mall
 
-🌐 [同济商城 | TJ-Mall](http://101.132.174.191:8080/)
+🌐 [同济商城 | TJ-Mall](http://tj-mall.doublez.site/)
 
-🎥 [网页视频](https://www.bilibili.com/video/BV1U5411s7DS/)
+🎥 [网页视频 | Intro Video](https://www.bilibili.com/video/BV1U5411s7DS/)
 
  📦[tongji-mall-0.0.1-SNAPSHOT.jar](https://github.com/doubleZ0108/TJ-Mall/blob/master/tongji-mall-0.0.1-SNAPSHOT.jar)
 
@@ -85,9 +85,9 @@
 
 - ❗️远程部署
 
-  > 请访问http://101.132.174.191:8080/
+  > 请访问http://tj-mall.doublez.site/
   >
-  > 域名已提交申请，正在备案
+  > ip地址: http://101.132.174.191:8080/
 
 - ❗️适配电脑 平板 手机不同平台
 
