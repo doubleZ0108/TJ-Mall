@@ -6,7 +6,7 @@
 
 🎥 [网页视频 | Intro Video](https://www.bilibili.com/video/BV1U5411s7DS/)
 
- 📦[tongji-mall-0.0.1-SNAPSHOT.jar](https://github.com/doubleZ0108/TJ-Mall/blob/master/tongji-mall-0.0.1-SNAPSHOT.jar)
+ 📦[tongji-mall-0.0.1-SNAPSHOT.jar](https://github.com/doubleZ0108/TJ-Mall/releases/tag/v1.0)
 
 ##### Table of Contents
 
@@ -85,7 +85,7 @@
 
 - ❗️远程部署
 
-  > 请访问http://tj-mall.doublez.site/
+  > 请访问 http://tj-mall.doublez.site/
   >
   > ip地址: http://101.132.174.191:8080/
 
